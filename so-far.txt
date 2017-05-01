@@ -1,0 +1,322 @@
+# Junctions First
+
+gco --orphan "Dwarka-Sector-21"
+git commit --allow-empty -m "Dwarka Sector 21. Blue and Airport lines."
+
+gco --orphan "New-Delhi"
+git commit --allow-empty -m "New Delhi. Airport and Yellow lines."
+
+gco --orphan "Rajiv-Chowk"
+git commit --allow-empty -m "Rajiv Chowk. Yellow and Blue lines."
+
+gco --orphan "Mandi-House"
+git commit --allow-empty -m "Mandi House. Navy and Blue lines."
+
+gco --orphan "Central-Secretariat"
+git commit --allow-empty -m "Central Secretariat. Yellow and Navy lines."
+
+gco --orphan "Yamuna-Bank"
+git commit --allow-empty -m "Yamuna Bank. To Vaishali or City Center fork on blue line."
+
+gco --orphan "Sikanderpur"
+git commit --allow-empty -m "Sikanderpur. Rapid Metro and Yellow lines."
+
+gco --orphan "Kirti-Nagar"
+git commit --allow-empty -m "Kirti Nagar. Green and Blue lines."
+
+gco --orphan "Punjabi-Bagh"
+git commit --allow-empty -m "Punjabi Bagh. To Kirti Nagar or Inderlok fork on green line."
+
+gco --orphan "Inderlok"
+git commit --allow-empty -m "Inderlok. Green and Red lines."
+
+gco --orphan "Kashmere-Gate"
+git commit --allow-empty -m "Kashmere Gate. Red and Yellow lines."
+
+
+git log --oneline --all --graph --decorate
+
+* df2e519 (HEAD -> Dwarka-Sector-21) Dwarka Sector 21. Blue and Airport lines.
+* b8e76d9 (Kashmere-Gate) Kashmere Gate. Red and Yellow lines.
+* 91af1a1 (Central-Secretariat) Central Secretariat. Yellow and Navy lines.
+* 7f2752f (Inderlok) Inderlok. Green and Red lines.
+* 4e90dcb (Kirti-Nagar) Kirti Nagar. Green and Blue lines.
+* 6dbdb93 (Mandi-House) Mandi House. Navy and Blue lines.
+* 23058fb (New-Delhi) New Delhi. Airport and Yellow lines.
+* 60e0638 (Punjabi-Bagh) Punjabi Bagh. To Kirti Nagar or Inderlok fork on green line.
+* 4abb034 (Rajiv-Chowk) Rajiv Chowk. Yellow and Blue lines.
+* 4f6f9b9 (Sikanderpur) Sikanderpur. Rapid Metro and Yellow lines.
+* 3a32b37 (Yamuna-Bank) Yamuna Bank. To Vaishali or City Center fork on blue line.
+
+gco --orphan Airport-Line
+git merge --allow-unrelated-histories df2e519
+git commit --allow-empty -m "I.G.I. Airport"
+git commit --allow-empty -m "Delhi Aero City"
+git commit --allow-empty -m "Dhaula Kuan"
+git commit --allow-empty -m "Shivaji Stadium"
+git merge --allow-unrelated-histories 23058fb
+
+
+gco --orphan Blue-Line
+git merge --allow-unrelated-histories df2e519
+git commit --allow-empty -m "Dwarka Sector 8"
+git commit --allow-empty -m "Dwarka Sector 9"
+git commit --allow-empty -m "Dwarka Sector 10"
+git commit --allow-empty -m "Dwarka Sector 11"
+git commit --allow-empty -m "Dwarka Sector 12"
+git commit --allow-empty -m "Dwarka Sector 13"
+git commit --allow-empty -m "Dwarka Sector 14"
+git commit --allow-empty -m "Dwarka"
+git commit --allow-empty -m "Dwarka Mor"
+git commit --allow-empty -m "Nawada"
+git commit --allow-empty -m "Uttam Nagar West"
+git commit --allow-empty -m "Uttam Nagar East"
+git commit --allow-empty -m "Janakpuri West"
+git commit --allow-empty -m "Janakpuri East"
+git commit --allow-empty -m "Tilak Nagar"
+git commit --allow-empty -m "Subhash Nagar"
+git commit --allow-empty -m "Tagore Garden"
+git commit --allow-empty -m "Rajouri Garden"
+git commit --allow-empty -m "Ramesh Nagar"
+git commit --allow-empty -m "Moti Nagar"
+
+git merge --allow-unrelated-histories 4e90dcb
+
+git commit --allow-empty -m "Shadipur"
+git commit --allow-empty -m "Rajendra Place"
+git commit --allow-empty -m "Karol Bagh"
+git commit --allow-empty -m "Jhandewalan"
+git commit --allow-empty -m "Ramakrishna Ashram Marg"
+
+git merge --allow-unrelated-histories 4abb034
+
+git commit --allow-empty -m "Barahkhamba Road"
+
+git merge --allow-unrelated-histories 6dbdb93
+
+git commit --allow-empty -m "Pragati Maidan"
+git commit --allow-empty -m "Indraprastha"
+
+git merge --allow-unrelated-histories 3a32b37
+
+git branch Blue-Line-To-City-Center
+gco -b Blue-Line-To-Vaishali
+
+git commit --allow-empty -m "Laxmi Nagar"
+git commit --allow-empty -m "Nirman Vihar"
+git commit --allow-empty -m "Preet Vihar"
+git commit --allow-empty -m "Karkarduma"
+git commit --allow-empty -m "Anand Vihar ISBT"
+git commit --allow-empty -m "Kaushambi"
+git commit --allow-empty -m "Vaishali"
+
+gco Blue-Line-To-City-Center
+git commit --allow-empty -m "Akshardham"
+git commit --allow-empty -m "Mayur Vihar 1"
+git commit --allow-empty -m "Mayur Vihar Extension"
+git commit --allow-empty -m "New Ashok Nagar"
+git commit --allow-empty -m "Noida Sector 15"
+git commit --allow-empty -m "Noida Sector 16"
+git commit --allow-empty -m "Noida Sector 18"
+git commit --allow-empty -m "Botanical Garden"
+git commit --allow-empty -m "Golf Course"
+git commit --allow-empty -m "City Center"
+
+
+
+Till now
+
+delhi-metro (Blue-Line-To-City-Center) $ git log --all --decorate --graph --oneline
+* 0e7eb8f (HEAD -> Blue-Line-To-City-Center) City Center
+* b74a9ea Golf Course
+* 5bd5861 Botanical Garden
+* e6e8885 Noida Sector 18
+* bc1430d Noida Sector 16
+* cb7d892 Noida Sector 15
+* b41bd7d New Ashok Nagar
+* a034c14 Mayur Vihar Extension
+* b34ab84 Mayur Vihar 1
+* 32e284a Akshardham
+| * 54e601e (Blue-Line-To-Vaishali) Vaishali
+| * b106149 Kaushambi
+| * 8347ad2 Anand Vihar ISBT
+| * 2ca8c02 Karkarduma
+| * a2e5604 Preet Vihar
+| * 2c2b015 Nirman Vihar
+| * d163075 Laxmi Nagar
+|/  
+*   4066c95 (Blue-Line) Yamuna Bank. To Vaishali or City Center fork on blue line.
+|\  
+| * 3a32b37 (Yamuna-Bank) Yamuna Bank. To Vaishali or City Center fork on blue line.
+* 4561b57 Indraprastha
+* 867f0a3 Pragati Maidan
+*   3afbee1 Mandi House. Navy and Blue lines.
+|\  
+| * 6dbdb93 (Mandi-House) Mandi House. Navy and Blue lines.
+* bd37c50 Barahkhamba Road
+*   860018f Rajiv Chowk. Yellow and Blue lines.
+|\  
+| * 4abb034 (Rajiv-Chowk) Rajiv Chowk. Yellow and Blue lines.
+* 117b6a1 Ramakrishna Ashram Marg
+* 3fa24da Jhandewalan
+* 51d7796 Karol Bagh
+* 5f198b9 Rajendra Place
+* 62fcd27 Shadipur
+*   34b3d09 Kirti Nagar. Green and Blue lines.
+|\  
+| * 4e90dcb (Kirti-Nagar) Kirti Nagar. Green and Blue lines.
+* 30a0fbf Moti Nagar
+* a4f2294 Ramesh Nagar
+* 272e1d8 Rajouri Garden
+* e21eaa6 Tagore Garden
+* 5cafe41 Subhash Nagar
+* 622eb65 Tilak Nagar
+* cdaf8b4 Janakpuri East
+* 6d09ac9 Janakpuri West
+* d5fbe89 Uttam Nagar East
+* 3821e68 Uttam Nagar West
+* ab470f4 Nawada
+* 05d711b Dwarka Mor
+* 5e3cd4e Dwarka
+* 345639c Dwarka Sector 14
+* 7b83dad Dwarka Sector 13
+* 17b81e7 Dwarka Sector 12
+* a635f78 Dwarka Sector 11
+* fdc0d4a Dwarka Sector 10
+* dc2625a Dwarka Sector 9
+* bcb6ad8 Dwarka Sector 8
+| *   3af9bf8 (Airport-Line) New Delhi. Airport and Yellow lines.
+| |\  
+| | * 23058fb (New-Delhi) New Delhi. Airport and Yellow lines.
+| * 7c74399 Shivaji Stadium
+| * d0502b3 Dhaula Kuan
+| * 9d3b425 Delhi Aero City
+| * cca931e I.G.I. Airport
+|/  
+* df2e519 (Dwarka-Sector-21) Dwarka Sector 21. Blue and Airport lines.
+* b8e76d9 (Kashmere-Gate) Kashmere Gate. Red and Yellow lines.
+* 91af1a1 (Central-Secretariat) Central Secretariat. Yellow and Navy lines.
+* 7f2752f (Inderlok) Inderlok. Green and Red lines.
+* 60e0638 (Punjabi-Bagh) Punjabi Bagh. To Kirti Nagar or Inderlok fork on green line.
+* 4f6f9b9 (Sikanderpur) Sikanderpur. Rapid Metro and Yellow lines.
+
+
+
+
+
+RED LINE
+
+gco --orphan Red-Line
+git commit --allow-empty -m "Rithala"
+git commit --allow-empty -m "Rohini West"
+git commit --allow-empty -m "Rohini East"
+git commit --allow-empty -m "Pitampura"
+git commit --allow-empty -m "Kohat Enclave"
+git commit --allow-empty -m "Netaji Subhash Place"
+git commit --allow-empty -m "Keshav Puram"
+git commit --allow-empty -m "Kanhaiya Nagar"
+
+git merge --allow-unrelated-histories 7f2752f
+
+git commit --allow-empty -m "Shastri Nagar"
+git commit --allow-empty -m "Pratap Nagar"
+git commit --allow-empty -m "Pulbangash"
+git commit --allow-empty -m "Tis Hazari"
+
+git merge --allow-unrelated-histories b8e76d9
+
+git commit --allow-empty -m "Shastri Park"
+git commit --allow-empty -m "Seelampur"
+git commit --allow-empty -m "Welcome"
+git commit --allow-empty -m "Shahdra"
+git commit --allow-empty -m "Mansarovar Park"
+git commit --allow-empty -m "Jhilmil"
+git commit --allow-empty -m "Dilshad Garden"
+
+
+YELLOW-LINE
+
+gco --orphan Yellow-Line
+
+git commit --allow-empty -m "Samaypur Badli"
+git commit --allow-empty -m "Rohini Sector 18,19"
+git commit --allow-empty -m "Haiderpur Badli Mor"
+git commit --allow-empty -m "Jahangirpuri"
+git commit --allow-empty -m "Adarsh Nagar"
+git commit --allow-empty -m "Azadpur"
+git commit --allow-empty -m "Model Town"
+git commit --allow-empty -m "G.T.B. Nagar"
+git commit --allow-empty -m "Vishwavidyalaya"
+git commit --allow-empty -m "Vidhan Sabha"
+git commit --allow-empty -m "Civil Lines"
+
+git merge --allow-unrelated-histories b8e76d9
+
+git commit --allow-empty -m "Chandni Chowk"
+git commit --allow-empty -m "Chawri Bazar"
+
+git merge --allow-unrelated-histories 23058fb
+
+git merge --allow-unrelated-histories 4abb034
+
+git commit --allow-empty -m "Patel Chowk"
+
+git merge --allow-unrelated-histories 91af1a1
+
+git commit --allow-empty -m "Udyog Bhawan"
+git commit --allow-empty -m "Lok Kalyan Marg"
+git commit --allow-empty -m "Jor Bhagh"
+git commit --allow-empty -m "INA"
+git commit --allow-empty -m "AIIMS"
+git commit --allow-empty -m "Green Park"
+git commit --allow-empty -m "Hauz Khas"
+git commit --allow-empty -m "Malviya Nagar"
+git commit --allow-empty -m "Saket"
+git commit --allow-empty -m "Qutab Minar"
+git commit --allow-empty -m "Chhattarpur"
+git commit --allow-empty -m "Sultanpur"
+git commit --allow-empty -m "Ghitorni"
+git commit --allow-empty -m "Arjangarh"
+git commit --allow-empty -m "Guru Dronacharya"
+
+git merge --allow-unrelated-histories 4f6f9b9
+
+git commit --allow-empty -m "M.G. Road"
+git commit --allow-empty -m "IFFCO Chowk"
+git commit --allow-empty -m "HUDA City Centre"
+
+
+NAVY LINE
+
+gco --orphan Navy-Line
+git commit --allow-empty -m "ITO"
+
+git merge --allow-unrelated-histories 6dbdb93
+
+git merge --allow-unrelated-histories 91af1a1
+
+git commit --allow-empty -m "Khan Market"
+git commit --allow-empty -m "JLN Stadium"
+git commit --allow-empty -m "Jangpura"
+git commit --allow-empty -m "Lajpat Nagar"
+git commit --allow-empty -m "Moolchand"
+git commit --allow-empty -m "Kailash Colony"
+git commit --allow-empty -m "Nehru Place"
+git commit --allow-empty -m "Kalkaji Mandir"
+git commit --allow-empty -m "Govind Puri"
+git commit --allow-empty -m "Okhla"
+git commit --allow-empty -m "Jasola - Apollo"
+git commit --allow-empty -m "Sarita Vihar"
+git commit --allow-empty -m "Mohan Estate"
+git commit --allow-empty -m "Tughlakabad"
+git commit --allow-empty -m "Badarpur Border"
+git commit --allow-empty -m "Sarai"
+git commit --allow-empty -m "N.H.P.C. Chowk"
+git commit --allow-empty -m "Mewala Maharajpur"
+git commit --allow-empty -m "Sector 28"
+git commit --allow-empty -m "Badkal Mor"
+git commit --allow-empty -m "Old Faridabad"
+git commit --allow-empty -m "Neelam Chowk Ajronda"
+git commit --allow-empty -m "Bata Chowk"
+git commit --allow-empty -m "Escorts Mujesar"
+
