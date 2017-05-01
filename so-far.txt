@@ -320,3 +320,17 @@ git commit --allow-empty -m "Neelam Chowk Ajronda"
 git commit --allow-empty -m "Bata Chowk"
 git commit --allow-empty -m "Escorts Mujesar"
 
+
+gcom
+
+git branch -D Dwarka-Sector-21
+git branch -D Kashmere-Gate
+git branch -D entral-Secretariat
+git branch -D Inderlok
+git branch -D Kirti-Nagar
+git branch -D Mandi-House
+git branch -D New-Delhi
+git branch -D Punjabi-Bagh
+git branch -D Rajiv-Chowk
+git branch -D Sikanderpur
+git branch -D Yamuna-Bank
